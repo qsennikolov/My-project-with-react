@@ -43,15 +43,46 @@ html {
 
 body {
     color: #666666;
-    font-size: 14px;
+    font-size: 5px;
     line-height: 1.80857;
     font-weight: normal;
     overflow-x: hidden;
-    background-image: url(../../images/body-bg.png);
+    background-image: url(../../src/assets/images/body-bg.png);
     height: auto;
     background-size: 100% 100%;
     background-repeat: no-repeat;
     font-family: 'Sen', sans-serif;
+}
+
+.logo{
+    width: 120em;
+}
+
+.logo, img{
+    margin-left: 20em;
+}
+
+.navbar, navbar-light, bg-light, justify-content-between {
+    display: flex;
+    justify-content: center;
+    padding-left: 30px;
+}
+
+.login_text{
+    margin-left: 40px;
+    
+}
+.form-inline{
+    margin-right: 40px;
+}
+
+.row2{
+    display: flex;
+    margin-left: 35%;
+}
+
+.row-footer{
+    display: flex;
 }
 
 a {
@@ -82,15 +113,15 @@ h6 {
 }
 
 h1 {
-    font-size: 24px
+    font-size: 16px
 }
 
 h2 {
-    font-size: 22px
+    font-size: 14px
 }
 
 h3 {
-    font-size: 18px
+    font-size: 10px
 }
 
 h4 {
@@ -296,7 +327,7 @@ button {
 
 
 .login_text a {
-    font-size: 18px;
+    font-size: 14px;
     color: #ffffff;
     float: left;
     background-color: #252525;
@@ -350,28 +381,31 @@ button {
 }
 
 .menu_main {
-    width: 70%;
+    width: 60%;
     margin: 0 auto;
     text-align: center;
     background-color: #252525;
     height: auto;
     display: flex;
-    padding: 20px 20px;
+    padding: 10px 10px;
+    
+    
 }
 
 .custome_menu {
-    width: 78%;
-    float: left;
+    width: 65%;
+    
 }
 
 .custome_menu ul {
     padding: 0px;
-    margin: 0px;
+    margin-left: 8em;
+    
 }
 
 .custome_menu li {
     float: left;
-    font-size: 18px;
+    font-size: 14px;
     color: #ffffff;
     padding: 0px 10px;
     text-transform: uppercase;
@@ -392,12 +426,12 @@ button {
 
 .login_menu ul {
     padding: 0px;
-    margin: 0px;
+    margin-left: 40em;
 }
 
 .login_menu li {
     float: left;
-    font-size: 18px;
+    font-size: 14px;
     color: #ffffff;
     padding: 0px 20px;
     text-transform: uppercase;
@@ -914,7 +948,7 @@ input.form-control::placeholder {
 .contact_section_2 {
     width: 100%;
     text-align: center;
-    background-image: url(../../images/contact-bg.png);
+    background-image: url(../../src/assets/images/contact-bg.png);
     height: auto;
     background-size: 100%;
     padding: 40px 0px 60px 0px;

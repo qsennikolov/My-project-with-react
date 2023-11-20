@@ -1,17 +1,31 @@
-import { useState } from 'react'
-import $ from "jquery"
-import Main from '../components/Main.jsx'
-import Home from "../components/Home.jsx"
-import Footer from '../components/Footer.jsx'
-import Navigation from '../components/Navigation.jsx'
+import { Routes, Route } from 'react-router-dom'
+
+import Navbar from '../components/navbar/Navbar.jsx'
+import Navi from '../components/navigation/Navi.jsx'
+import Home from "../components/home/Home.jsx"
+
+import Collections from '../components/main/Collections.jsx'
+import Search from '../components/search/Search.jsx'
+import Appdownload from '../components/appdownload.jsx/AppDownload.jsx'
+import Blog from '../components/blog/Blog.jsx'
+import Contact from '../components/contact/Contact.jsx'
+import Footer from '../components/footer/Footer.jsx'
 
 
 function App() {
   return (
     <>
-    <Navigation />
+    <Navbar />
+    <Navi />
     <Home />
-    <Main />
+   
+        <Routes>
+            <Route path='/collections' element={<Collections />} />
+            <Route path='/blog' element={ <Blog />} />
+            <Route path='/shop' element= { <Search />} />
+            <Route path='/appdownload' element= {<Appdownload />} />
+            <Route path='/contact' element={ <Contact />} />
+        </Routes>
     <Footer />
 
   </>
