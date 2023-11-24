@@ -1,34 +1,46 @@
-import Col from 'react-bootstrap/Col';
-import Form from 'react-bootstrap/Form';
-import Row from 'react-bootstrap/Row';
-import Button from 'react-bootstrap/Button';
+import useForm from '../../hooks/useForm';
 
 const  LogIn = () => {
-    
-  return (
-    <Form className='Register'>
-      <Form.Group as={Row} className="mb-3" controlId="formPlaintextEmail">
-        <Form.Label column sm="2">
-          Email
-        </Form.Label>
-        <Col sm="2">
-          {/* <Form.Control plaintext readOnly defaultValue="email@example.com" /> */}
-          <Form.Control type="email" placeholder="email" />
-        </Col>
-      </Form.Group>
+    const {values, onChange, onSubmit} = useForm( {
+        email:'',
+        password: '',
+    });
 
-      <Form.Group as={Row} className="mb-3" controlId="formPlaintextPassword">
-        <Form.Label column sm="2">
-          Password
-        </Form.Label>
-        <Col sm="2">
-          <Form.Control type="password" placeholder="Password" />
-        </Col>
-      </Form.Group>
-       <Button variant="primary" type="submit">
-        Log in
-      </Button>
-    </Form>
+
+  return (
+     <section id= "login-page" className="auth">
+        <form id="login" onSubmit={onSubmit}>
+            <div className="container">
+                <div className="brand-logo"></div>
+                <h1>Login</h1>
+
+                <label htmlFor="email">Email:</label>
+                <input 
+                type="email" 
+                id="email" 
+                name="email"
+                placeholder="maria@gmail.com">
+                onChange={onChange}
+                value={values.email}
+                 </input>
+
+                
+                <label htmlFor="login-pass">Password:</label>
+                <input
+                 type="password" 
+                 name="password"
+                 id="login-password">
+                onChange={onChange}
+                value ={values.password}
+                  </input>
+                <input type="submit" className='btn submit' value="Login"></input>
+
+                <p className="field">
+                    <span>If you have already have profile click <a href="#">here</a></span>
+                </p>
+            </div>
+        </form>
+    </section>
   );
 }
 
