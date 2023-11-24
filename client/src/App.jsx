@@ -12,10 +12,16 @@ import Contact from '../components/contact/Contact.jsx'
 import Footer from '../components/footer/Footer.jsx'
 import LogIn from '../components/logIn/LogIn.jsx'
 import Register from '../components/register/Register.jsx'
+import { useState } from 'react'
 
 
 function App() {
-  return (
+	const [auth, setAuth] = useState({});
+
+	const loginSubmitHandler = (values) => {
+		console.log(values);
+	}
+	return (
     <>
     <Navbar />
     <Navi />
@@ -27,7 +33,7 @@ function App() {
             <Route path='/shop' element= { <Search />} />
             {/* <Route path='/appdownload' element= {<Appdownload />} /> */}
             <Route path='/contact' element={ <Contact />} />
-            <Route path='/login' element= { <LogIn /> } />
+            <Route path='/login' element= { <LogIn loginSubmitHandler={loginSubmitHandler} /> } />
             <Route path='register' element= { < Register />} />
 
         </Routes>
