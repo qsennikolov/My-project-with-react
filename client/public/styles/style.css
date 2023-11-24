@@ -32,6 +32,14 @@
 
 /*--------------------------------------------------------------------- skeleton ---------------------------------------------------------------------*/
 
+.Register{
+    display: flex;
+    flex-direction: column;
+    max-width: 20%;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
 * {
     box-sizing: border-box !important;
     transition: ease all 0.5s;
@@ -323,7 +331,6 @@ button {
         font-size: 18px;
     }
 }
-
 
 
 .login_text a {

@@ -24,17 +24,17 @@ return (
                                     <div className="main">
                                        {/* // Another variation with a button --> */}
                                        <div className="input-group">
-                                          <input type="text" className="form-control" placeholder="Search"/>
-                                          <div className="input-group-append">
+                                          {/* <input type="text" className="form-control" placeholder="Search"/> */}
+                                          {/* <div className="input-group-append"> */}
                                              {/* <button className="btn btn-secondary" type="button" style="background-color: #ffffff; border-color:#ffffff "> */}
                                              {/* <i className="fa fa-search" style="color: #191919;"></i> */}
                                              {/* </button> */}
-                                          </div>
+                                          {/* </div> */}
                                        </div>
                                     </div>
                                  </div>
-                                 <div className="ordernow_bt"><a href="#">Order Now</a></div>
-                              </div>
+                                 {/* <div className="ordernow_bt"><a href="#">Order Now</a></div>
+                              </div> */}
                            </div>
                         </div>
                      </div>
