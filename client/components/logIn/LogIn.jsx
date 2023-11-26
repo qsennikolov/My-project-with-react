@@ -14,7 +14,6 @@ export default function Login () {
         [LoginFormKeys.Password]: "",
     });
 
-
   return (
      <section id= "login-page" className="auth">
         <form id="login" onSubmit={onSubmit}>
@@ -27,7 +26,7 @@ export default function Login () {
                 type="email" 
                 id="email" 
                 name={LoginFormKeys.Email}
-                placeholder="maria@gmail.com"
+                placeholder="enter e-mail "
                 onChange={onChange}
                 value={values[LoginFormKeys.Email]}
                 />
@@ -35,17 +34,17 @@ export default function Login () {
                 
                 <label htmlFor="login-pass">Password:</label>
                 <input
-                 type="password" 
+                 type="password"
+                 placeholder='enter password'
                  name={LoginFormKeys.Password}
                  id="login-password"
                 onChange={onChange}
                 value={values[LoginFormKeys.Password]}
+                
                 />
+
                 <input type="submit" className='btn submit' value="Login"></input>
 
-                <p className="field">
-                    <span>If you have already have profile click <a href="#">here</a></span>
-                </p>
             </div>
         </form>
     </section>

@@ -21,20 +21,27 @@ function App() {
 	const [auth, setAuth] = useState({});
 
 	const loginSubmitHandler = async (values) => {
-        const result = await authService.login(values.email, values.password);
-        console.log(result);
-	}
-
-    const registerSubmitHandler = async (values) => {
-        // console.log(values);
+        try {
+         const response = await authService.login(values.email, values.password);
+            if(!response.ok){
+            throw new Error; 
+        }
+        } catch (error) {
+            alert("Email or password don't match")
+            }
     }
+	
 
-    const values = {
-        loginSubmitHandler,
-        registerSubmitHandler,
-        username: auth.username,
-        email: auth.email,
-    }
+    // const registerSubmitHandler = async (values) => {
+    //     // console.log(values);
+    // }
+
+    // const values = {
+    //     loginSubmitHandler,
+    //     registerSubmitHandler,
+    //     username: auth.username,
+    //     email: auth.email,
+    // };
 
 	return (
     <AuthContext.Provider value={{loginSubmitHandler}}>
