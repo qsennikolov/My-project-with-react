@@ -22,22 +22,17 @@ function App() {
 	const [auth, setAuth] = useState({});
 
 	const loginSubmitHandler = async (values) => {
-        let response = ''
-        try {
-             response = await authService.login(values.email, values.password);
-    //          if(!response.ok){
-    //      throw new Error; 
-    //  }
-        } catch (error) {
-        alert("Email or password don't match")
-    }
+        const result = await authService.login(values.email, values.password);
 
-    setAuth(response)
-    navigate('/home')
-}
+        setAuth(result);
+        navigate("/home")
+    }   
 	
     const registerSubmitHandler = async (values) => {
-        console.log(values);
+        const result = await authService.register(values.email, values.password)
+       
+        setAuth(result);
+        navigate("/home");
     }
 
     const values = {
@@ -45,7 +40,7 @@ function App() {
         registerSubmitHandler,
         username: auth.username,
         email: auth.email,
-        isAuthenticated: !!auth.username,
+        isAuthenticated: !!auth.email,
     };
 
 	return (
