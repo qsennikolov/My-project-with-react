@@ -15,6 +15,7 @@ import Contact from '../components/contact/Contact.jsx'
 import Footer from '../components/footer/Footer.jsx'
 import Login from '../components/logIn/Login.jsx'
 import Register from '../components/register/Register.jsx'
+import Logout from '../components/logout/Logout.jsx'
 
 
 function App() {
@@ -25,22 +26,31 @@ function App() {
         const result = await authService.login(values.email, values.password);
 
         setAuth(result);
-        navigate("/home")
+        localStorage.setItem('accessToken', result.accessToken);
+        navigate("/home");
     }   
 	
     const registerSubmitHandler = async (values) => {
         const result = await authService.register(values.email, values.password)
        
         setAuth(result);
+        localStorage.setItem('accessToken', result.accessToken);
         navigate("/home");
+    }
+
+    const logoutHandler = () =>{
+        setAuth({});
+        localStorage.removeItem('accessToken');
+        navigate('/home');
     }
 
     const values = {
         loginSubmitHandler,
         registerSubmitHandler,
+        logoutHandler,
         username: auth.username,
         email: auth.email,
-        isAuthenticated: !!auth.email,
+        isAuthenticated: !!auth.accessToken,
     };
 
 	return (
@@ -56,6 +66,7 @@ function App() {
             <Route path='/contact' element={ <Contact />} />
             <Route path='/login' element= { <Login /> } />
             <Route path='register' element= { < Register />} />
+            <Route path ='/Logout' element= { <Logout /> } />
         </Routes>
     <Footer />
 
