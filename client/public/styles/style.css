@@ -57,7 +57,7 @@ body {
     overflow-x: hidden;
     background-image: url(../../src/assets/images/body-bg.png);
     height: auto;
-    background-size: 100% 100%;
+    background-size: 100% 250%;
     background-repeat: no-repeat;
     font-family: 'Sen', sans-serif;
 }
@@ -66,8 +66,12 @@ body {
     width: 120em;
 }
 
-.logo, img{
+/* .logo, img{
     margin-left: 20em;
+} */
+
+.logo, .img{
+    padding-left: 30em;
 }
 
 .navbar, navbar-light, bg-light, justify-content-between {
@@ -86,7 +90,7 @@ body {
 
 .row2{
     display: flex;
-    margin-left: 35%;
+    margin-left: 0%;
 }
 
 .row-footer{
@@ -656,17 +660,21 @@ input.form-control::placeholder {
 /* service section start */
 
 .service_section {
-    width: 100%;
+    width: auto;
     float: left;
-    padding-top: 0px;
+    padding-top: 16px;
 }
 
 .service_taital {
     width: 100%;
-    float: left;
     font-size: 50px;
     color: #fefbfb;
     font-weight: 800;
+    text-align: center;
+    padding-left: 10em;
+}
+
+.service_taital h1 {
     text-align: center;
 }
 
@@ -679,8 +687,10 @@ input.form-control::placeholder {
 .service_box {
     width: 100%;
     height: auto;
-    border: 1px solid #ffffff;
+    border: 3px solid #ffffff;
     margin-top: 20px;
+    padding-left: 15em;
+    padding-right: 10em;
 }
 
 
@@ -1106,7 +1116,6 @@ input.form-control::placeholder {
     float: left;
     height: auto;
     background-size: 100%;
-    padding-bottom: 30px;
     background-repeat: no-repeat;
     margin-top: 90px;
 }
@@ -1138,6 +1147,12 @@ input.form-control::placeholder {
 .footer_sectio_2 {
     width: 100%;
     float: left;
+    padding: 0em, 20em;
+}
+
+.col-lg-3.col-md-6{
+    padding-right: 30em;
+    padding-bottom: 5em;
 }
 
 .footer_logo {

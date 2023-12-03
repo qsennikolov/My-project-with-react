@@ -12,13 +12,13 @@ const Footer = () => {
                         <div className="col-lg-3 col-md-6">
                            <h2 className="useful_text"></h2>
                            <div className="footer_menu">
-                              <ul>
+                              {/* <ul>
                                  <li className="active"><a href="index.html">Home</a></li>
                                  <li><a href="about.html">About</a></li>
                                  <li><a href="location.html">Location</a></li>
                                  <li><a href="service.html">Services</a></li>
                                  <li><a href="features.html">Features</a></li>
-                              </ul>
+                              </ul> */}
                            </div>
                         </div>
                         <div className="col-lg-3 col-md-6">

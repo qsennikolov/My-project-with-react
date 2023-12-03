@@ -50,15 +50,6 @@ const Collections = () => {
                   </div>
                </div>
             </div>
-            {/* <!-- blog section end --> */}
-            {/* <!-- shop section start --> */}
-          
-            {/* <!-- shop section end --> */}
-            {/* <!-- testimonial section start --> */}
-           
-            {/* <!-- testimonial section end --> */}
-            
-          
          </div>
       </div>
     )
