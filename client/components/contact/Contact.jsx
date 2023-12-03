@@ -19,10 +19,10 @@ const Contact = () => {
                      </div>
                      {/* <!-- order section start --> */}
                      <div className="order_section">
-                        <div className="order_taital_main">
-                           <h1 className="order_taital">Order Best food at time</h1>
-                           <div className="order_bt"><a href="#">Order Now</a></div>
-                        </div>
+                        {/* <div className="order_taital_main"> */}
+                           {/* <h1 className="order_taital">Order Best food at time</h1> */}
+                           {/* <div className="order_bt"><a href="#">Order Now</a></div> */}
+                        {/* </div> */}
                      </div>
                      {/* <!-- order section end --> */}
                   </div>

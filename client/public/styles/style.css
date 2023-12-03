@@ -394,28 +394,55 @@ button {
     background-color: #252525;
     height: auto;
     display: flex;
-    padding: 10px 10px;
-    
-    
+    padding: 5px 10px;
+}
+
+.custome_menu{
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #252525;
+    height: auto;
+    display: flex;
+    padding: 10px 0px;
+}
+
+.user{
+    width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        background-color: #252525;
+        height: auto;
+        display: flex;
+        padding: 3px 10px;
 }
 
 .custome_menu {
-    width: 65%;
-    
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        background-color: #252525;
+        height: auto;
+        display: flex;
+        padding: 5px 10px;
 }
 
 .custome_menu ul {
     padding: 0px;
     margin-left: 8em;
-    
+}
+
+li .user_name{
+    color: #ff0000
 }
 
 .custome_menu li {
     float: left;
-    font-size: 14px;
+    font-size: 17px;
     color: #ffffff;
-    padding: 0px 10px;
+    padding: 0px 60px;
     text-transform: uppercase;
+    
 }
 
 .custome_menu li a {
@@ -425,9 +452,10 @@ button {
 .custome_menu li a:hover {
     color: #8eb50b;
 }
-.custome_menu li.active a{
+
+/* .custome_menu li.active a{
     color: #8eb50b;
-}
+} */
 
 
 
@@ -438,9 +466,9 @@ button {
 
 .login_menu li {
     float: left;
-    font-size: 14px;
-    color: #ffffff;
-    padding: 0px 20px;
+    font-size: 17px;
+    color: #8eb50b;
+    padding: 0px 49px;
     text-transform: uppercase;
 }
 

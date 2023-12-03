@@ -1,29 +1,44 @@
+import { useContext } from "react";
+import { Link } from "react-router-dom"
+import AuthContext from "../contexts/authContext";
+
 const Navi = () => {
-    return (
-        
-         <div className="container">
-                  <div className="menu_main">
-                     <div className="custome_menu">
-                        <ul>
-                           <li className="active"><a href="/home">Home</a></li>
-                           <li><a href="/blog">Blog</a></li>
-                           <li><a href="/collections">News</a></li>
-                           <li><a href="/shop">Shop</a></li>
-                           <li><a href="/contact">Contacts</a></li>
+   const {
+      isAuthenticated,
+      username,
+   } = useContext(AuthContext);
+   
+   
+   return (
+                  <div>
+                           {isAuthenticated && (
+                           <div className="custome_menu">
+                              <div className="user">
+                                 <li className="user_name">Welcome {username}</li>
+                                 <li><Link to="/home">Home</Link></li>
+                                 <li><Link to="/collections">News</Link></li>
+                                 <li><Link to="/blog">Blog</Link></li>
+                                 <li><Link to="/shop">Shop</Link></li>
+                                 <li><Link to="/contact">Contacts</Link></li>
+                                 <li><Link to="/logout">Log out</Link></li>
+                              </div>
+                           </div>
+                           )}
+                           {/* <li><Link to="#"><i className="fa fa-search" aria-hidden="true"></i></Link></li> */}
+                    
+                           {!isAuthenticated && (
+                     <div className="menu_main">
+                              <div className="custome_menu" id = "guest">
+                                 <li className="active"><Link to="/home">Home</Link></li>
+                                 <li><Link to="/contact">Contacts</Link></li>
+                                 <li><Link to="/login">Login</Link></li>
+                                 <li><Link to="/register">Register</Link></li>
+                              </div>
+                     </div> 
+                           )}
                            {/* <li><a href="/appdownload">Food App</a></li> */}
-                        </ul>
-                     </div>
-                     <div className="login_menu">
-                        <ul>
-                           <li><a href="/login">Login</a></li>
-                           <li><a href="/register">Register</a></li>
-                           <li><a href="/logout">Log out</a></li>
-                           <li><a href="#"><i className="fa fa-search" aria-hidden="true"></i></a></li>
-                        </ul>
-                     </div>
                   </div>
-               </div>
-    
+            
     )
 }
 export default Navi;

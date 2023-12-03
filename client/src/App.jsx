@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, useNavigate } from 'react-router-dom'
 
 import * as authService from '../components/services/authService'
 import AuthContext from '../components/contexts/authContext'
@@ -18,36 +18,40 @@ import Register from '../components/register/Register.jsx'
 
 
 function App() {
+    const navigate = useNavigate()
 	const [auth, setAuth] = useState({});
 
 	const loginSubmitHandler = async (values) => {
+        let response = ''
         try {
-         const response = await authService.login(values.email, values.password);
-            if(!response.ok){
-            throw new Error; 
-        }
+             response = await authService.login(values.email, values.password);
+    //          if(!response.ok){
+    //      throw new Error; 
+    //  }
         } catch (error) {
-            alert("Email or password don't match")
-            }
+        alert("Email or password don't match")
     }
+
+    setAuth(response)
+    navigate('/home')
+}
 	
+    const registerSubmitHandler = async (values) => {
+        console.log(values);
+    }
 
-    // const registerSubmitHandler = async (values) => {
-    //     // console.log(values);
-    // }
-
-    // const values = {
-    //     loginSubmitHandler,
-    //     registerSubmitHandler,
-    //     username: auth.username,
-    //     email: auth.email,
-    // };
+    const values = {
+        loginSubmitHandler,
+        registerSubmitHandler,
+        username: auth.username,
+        email: auth.email,
+        isAuthenticated: !!auth.username,
+    };
 
 	return (
-    <AuthContext.Provider value={{loginSubmitHandler}}>
+    <AuthContext.Provider value={values}>
     <Navbar />
     <Navi />
-   
         <Routes>
             <Route path='/home' element= { <Home />} />
             <Route path='/collections' element={<Collections />} />
@@ -57,7 +61,6 @@ function App() {
             <Route path='/contact' element={ <Contact />} />
             <Route path='/login' element= { <Login /> } />
             <Route path='register' element= { < Register />} />
-
         </Routes>
     <Footer />
 
