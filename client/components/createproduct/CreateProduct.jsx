@@ -14,7 +14,7 @@ export default function CreateProduct() {
         try {
             await productService.create(productData);
 
-            navigate('/shop')
+            navigate('/ShopList')
         } catch (error) {
             alert('error')
         }

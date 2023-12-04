@@ -18,7 +18,7 @@ const Navi = () => {
                                  <li><Link to="/home">Home</Link></li>
                                  {/* <li><Link to="/collections">News</Link></li> */}
                                  {/* <li><Link to="/blog">Blog</Link></li> */}
-                                 <li><Link to="/shopList">Shop List</Link></li>
+                                 <li><Link to="/ShopList">Shop List</Link></li>
                                  {/* <li><Link to="/contact">Contacts</Link></li> */}
                                  <li><Link to="/createproduct">Create Product</Link></li>
                                  <li><Link to="/logout">Log out</Link></li>

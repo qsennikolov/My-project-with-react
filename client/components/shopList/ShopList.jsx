@@ -1,25 +1,31 @@
 import { useEffect, useState } from "react";
 
 import * as productServices from '../services/productService';
+import ShopListItem from "./shopListItem/shopListItem.jsx";
 
 export default function ShopList() {
-   const [product, setProduct] = useState([]);
+   const [products, setProduct] = useState([]);
 
    useEffect(() =>{
       productServices.getAll()
          .then(result => setProduct(result));
    }, [])
 
-      console.log(product);
     return (
         <div className="service_section layout_padding">
                <div className="container">
                   <div className="row2">
                      <div className="col-sm-12">
-                        <h1 className="service_taital">Quick Searches</h1>
+                        <h1 className="service_taital">All Products</h1>
                      </div>
                   </div>
-                  <div className="service_section_2">
+
+                  {products.map(product => (
+                     <ShopListItem key={product._id} {...product}/>
+                  ))}
+
+                  {products.length === 0 && <h3 className="no-articles">No product yet</h3>}
+                  {/* <div className="service_section_2">
                      <div className="row2">
                         <div className="col">
                            <div className="service_box">
@@ -64,7 +70,7 @@ export default function ShopList() {
                            <div className="seemore_bt"><a href="#">See More</a></div>
                         </div>
                      </div>
-                  </div>
+                  </div> */}
                </div>
             </div>
     )
