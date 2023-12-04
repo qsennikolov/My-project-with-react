@@ -16,10 +16,11 @@ const Navi = () => {
                               <div className="user">
                                  <li className="user_name">Welcome {username}</li>
                                  <li><Link to="/home">Home</Link></li>
-                                 <li><Link to="/collections">News</Link></li>
-                                 <li><Link to="/blog">Blog</Link></li>
-                                 <li><Link to="/shop">Shop</Link></li>
-                                 <li><Link to="/contact">Contacts</Link></li>
+                                 {/* <li><Link to="/collections">News</Link></li> */}
+                                 {/* <li><Link to="/blog">Blog</Link></li> */}
+                                 <li><Link to="/shopList">Shop List</Link></li>
+                                 {/* <li><Link to="/contact">Contacts</Link></li> */}
+                                 <li><Link to="/createproduct">Create Product</Link></li>
                                  <li><Link to="/logout">Log out</Link></li>
                               </div>
                            </div>

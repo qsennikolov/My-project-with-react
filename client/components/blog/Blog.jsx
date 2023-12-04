@@ -64,12 +64,12 @@ const Blog = () => {
                            </div>
                         </div>
                      </div>
-                     <a className="carousel-control-prev" href="#my_slider" role="button" data-slide="prev">
+                     {/* <a className="carousel-control-prev" href="#my_slider" role="button" data-slide="prev">
                      <i className="fa fa-arrow-left"></i>
-                     </a>
-                     <a className="carousel-control-next" href="#my_slider" role="button" data-slide="next">
+                     </a> */}
+                     {/* <a className="carousel-control-next" href="#my_slider" role="button" data-slide="next">
                      <i className="fa fa-arrow-right"></i>
-                     </a>
+                     </a> */}
                   </div>
                </div>
             </div>

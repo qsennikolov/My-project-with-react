@@ -16,10 +16,10 @@ const Navbar = () =>{
                      <a href="contacts.html">Contacts</a> */}
                   {/* </div> */}
                   <form className="form-inline ">
-                     <div className="login_text"><a href="#"><i className="fa fa-phone" aria-hidden="true"></i><span className="padding_left10">Call : +01 1234567890</span></a></div>
+                     <div className="login_text"><a href="/home"><i className="fa fa-phone" aria-hidden="true"></i><span className="padding_left10">Call : +01 1234567890</span></a></div>
                   </form>
                   <a className="logo" 
-                  href="index.html"
+                  href="/home"
                   >
                     <img src={logo}/>
                   </a>

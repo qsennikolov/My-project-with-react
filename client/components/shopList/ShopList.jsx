@@ -1,4 +1,16 @@
-const Search = () => {
+import { useEffect, useState } from "react";
+
+import * as productServices from '../services/productService';
+
+export default function ShopList() {
+   const [product, setProduct] = useState([]);
+
+   useEffect(() =>{
+      productServices.getAll()
+         .then(result => setProduct(result));
+   }, [])
+
+      console.log(product);
     return (
         <div className="service_section layout_padding">
                <div className="container">
@@ -18,9 +30,9 @@ const Search = () => {
                         </div>
                         <div className="col">
                            <div className="service_box">
-                              <div className="breakfast_img"><img src="../../src/assets/images/delivery-img.png"/></div>
+                              <div className="dessert_img"><img src="../../src/assets/images/dss.png"/></div>
                            </div>
-                           <h4 className="breakfast_text">Delivery</h4>
+                           <h4 className="breakfast_text">Desserts</h4>
                            <div className="seemore_bt"><a href="#">See More</a></div>
                         </div>
                         <div className="col">
@@ -57,4 +69,3 @@ const Search = () => {
             </div>
     )
 } 
-export default Search;

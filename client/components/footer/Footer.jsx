@@ -9,9 +9,9 @@ const Footer = () => {
                            <h2 className="footer_logo">Foodfinda</h2>
                            <p className="footer_text">t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of </p>
                         </div>
-                        <div className="col-lg-3 col-md-6">
-                           <h2 className="useful_text"></h2>
-                           <div className="footer_menu">
+                        {/* <div className="col-lg-3 col-md-6"> */}
+                           {/* <h2 className="useful_text"></h2> */}
+                           {/* <div className="footer_menu"> */}
                               {/* <ul>
                                  <li className="active"><a href="index.html">Home</a></li>
                                  <li><a href="about.html">About</a></li>
@@ -19,8 +19,8 @@ const Footer = () => {
                                  <li><a href="service.html">Services</a></li>
                                  <li><a href="features.html">Features</a></li>
                               </ul> */}
-                           </div>
-                        </div>
+                           {/* </div> */}
+                        {/* </div> */}
                         <div className="col-lg-3 col-md-6">
                            <h2 className="useful_text">Contact Info</h2>
                            <p className="address_text">Office Address</p>

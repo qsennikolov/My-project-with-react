@@ -8,13 +8,14 @@ import Navbar from '../components/navbar/Navbar.jsx'
 import Navi from '../components/navigation/Navi.jsx'
 import Home from "../components/home/Home.jsx"
 import Collections from '../components/main/Collections.jsx'
-import Search from '../components/search/Search.jsx'
+import ShopList from '../components/shopList/ShopList.jsx'
 // import Appdownload from '../components/appdownload.jsx/AppDownload.jsx'
 import Blog from '../components/blog/Blog.jsx'
-import Contact from '../components/contact/Contact.jsx'
+import Contact from '../components/createproduct/CreateProduct.jsx'
 import Footer from '../components/footer/Footer.jsx'
 import Login from '../components/logIn/Login.jsx'
 import Register from '../components/register/Register.jsx'
+import CreateProduct from '../components/createproduct/CreateProduct.jsx'
 import Logout from '../components/logout/Logout.jsx'
 
 
@@ -61,9 +62,9 @@ function App() {
             <Route path='/home' element= { <Home />} />
             <Route path='/collections' element={<Collections />} />
             <Route path='/blog' element={ <Blog />} />
-            <Route path='/shop' element= { <Search />} />
+            <Route path='/shopList' element= { <ShopList />} />
             {/* <Route path='/appdownload' element= {<Appdownload />} /> */}
-            <Route path='/contact' element={ <Contact />} />
+            <Route path='/createProduct' element={ <CreateProduct />} />
             <Route path='/login' element= { <Login /> } />
             <Route path='register' element= { < Register />} />
             <Route path ='/Logout' element= { <Logout /> } />

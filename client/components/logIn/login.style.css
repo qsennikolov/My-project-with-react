@@ -1,0 +1,59 @@
+#root{
+    width: 100%;
+        background-color: rgb(18, 18, 18, 0.9);
+        
+        background-size: cover;
+        float: left;
+}
+
+
+.auth{
+    display: flex;
+    justify-content: center;
+    padding-top: 10em;
+    
+}
+
+.container-login{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 150em;
+    
+}
+
+
+h1 {
+    font-size: 52px;
+    text-align: center;
+    /* color: #8eb50b; */
+    color: white;
+    text-decoration: solid;
+}
+
+.email-line{
+    font-size: 7em;
+    color: white;
+    width: 17em;
+}
+
+#email{
+    font-size: 1em;
+}
+
+label{
+    padding-right: 0.5em;
+}
+
+.password-line{
+    font-size: 7em;
+    color: white;
+}
+
+#login-password{
+    font-size: 1em;
+}
+
+.btn{
+    font-size: 5em;
+}
