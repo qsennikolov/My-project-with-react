@@ -14,12 +14,12 @@ export default function ShopListItem({
                 <div className="col">
                     <div className="service_box">
                         <div className="breakfast_img">
+                        <h4 className="breakfast_text">{title}</h4>
                             <img src={imageUrl}/>
                         </div>
                     </div>
-                        <h4 className="breakfast_text">{title}</h4>
-                        <h5 className="category">{category}</h5>
-                           <div className="details_btn"><Link to={`/product/${_id}`}>Details</Link></div>
+                        {/* <h5 className="category">{category}</h5> */}
+                           <div className="details_btn"><Link to={`/product/details/${_id}`}>Details</Link></div>
                 </div>
             </div>
         </div>

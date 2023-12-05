@@ -69,7 +69,7 @@ function App() {
             <Route path='/login' element= { <Login /> } />
             <Route path='register' element= { < Register />} />
             <Route path ='/Logout' element= { <Logout /> } />
-            <Route path='/product/:productId' element={<ProductDetails />} />
+            <Route path='/product/details/:productId' element={<ProductDetails />} />
         </Routes>
     <Footer />
 
