@@ -45,6 +45,7 @@
     padding: 2em;
 }
 
+
 * {
     box-sizing: border-box !important;
     transition: ease all 0.5s;
@@ -76,7 +77,8 @@ body {
 } */
 
 .logo, .img{
-    padding-left: 30em;
+    padding-left: 15em;
+    padding-top: 0.6em;
 }
 
 .navbar, navbar-light, bg-light, justify-content-between {
@@ -208,10 +210,10 @@ a,
     transition: all .3s ease-in-out;
 }
 
-img {
+/* img {
     max-width: 100%;
     height: auto;
-}
+} */
 
  :focus {
     outline: 0;
@@ -418,7 +420,6 @@ button {
 }
 
 .user{
-    width: 100%;
         margin: 0 auto;
         text-align: center;
         background-color: #252525;
@@ -442,17 +443,13 @@ button {
     margin-left: 8em;
 }
 
-li .user_name{
-    color: #ff0000
-}
-
 .custome_menu li {
     float: left;
-    font-size: 17px;
-    color: #ffffff;
-    padding: 0px 60px;
+    font-size: 20px;
+    color: #8eb50b;
+    padding: 0px 52px;
     text-transform: uppercase;
-    
+    font-weight: bold;
 }
 
 .custome_menu li a {
@@ -467,7 +464,9 @@ li .user_name{
     color: #8eb50b;
 } */
 
-
+/* .custome_menu ,.user, .user_name li {
+    background-color: red;
+} */
 
 .login_menu ul {
     padding: 0px;
@@ -667,11 +666,11 @@ input.form-control::placeholder {
 
 /* service section start */
 
-.service_section {
+/* .service_section {
     width: auto;
     float: left;
     padding-top: 16px;
-}
+} */
 
 .service_taital {
     width: 100%;
@@ -686,11 +685,11 @@ input.form-control::placeholder {
     text-align: center;
 }
 
-.service_section_2 {
+/* .service_section_2 {
     width: 100%;
     float: left;
     padding-top: 30px;
-}
+} */
 
 .service_box {
     width: 100%;

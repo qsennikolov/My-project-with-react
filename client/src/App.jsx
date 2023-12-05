@@ -13,10 +13,11 @@ import ShopList from '../components/shopList/ShopList.jsx'
 import Blog from '../components/blog/Blog.jsx'
 // import Contact from '../components/createproduct/CreateProduct.jsx'
 import Footer from '../components/footer/Footer.jsx'
-import Login from '../components/logIn/Login.jsx'
+import Login from '../components/logIn/LogIn.jsx'
 import Register from '../components/register/Register.jsx'
 import CreateProduct from '../components/createproduct/CreateProduct.jsx'
 import Logout from '../components/logout/Logout.jsx'
+import ProductDetails from '../components/productDetails/ProductDetails.jsx'
 
 
 function App() {
@@ -68,6 +69,7 @@ function App() {
             <Route path='/login' element= { <Login /> } />
             <Route path='register' element= { < Register />} />
             <Route path ='/Logout' element= { <Logout /> } />
+            <Route path='/product/:productId' element={<ProductDetails />} />
         </Routes>
     <Footer />
 

@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import './shopList.module.css'
 
 import * as productServices from '../services/productService';
 import ShopListItem from "./shopListItem/shopListItem.jsx";

@@ -1,6 +1,10 @@
+import { Link } from "react-router-dom"
+
 export default function ShopListItem({
+    _id,
     title,
     category,
+    price,
     imageUrl,
 
 }){
@@ -15,7 +19,7 @@ export default function ShopListItem({
                     </div>
                         <h4 className="breakfast_text">{title}</h4>
                         <h5 className="category">{category}</h5>
-                           <div className="details_bt"><a href="#">Details</a></div>
+                           <div className="details_btn"><Link to={`/product/${_id}`}>Details</Link></div>
                 </div>
             </div>
         </div>
