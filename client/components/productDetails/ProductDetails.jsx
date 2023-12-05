@@ -7,11 +7,15 @@ import * as commentService from '../services/commentService';
 
 export default function ProductDetails() {
     const [product, setProduct] = useState({})
+    const [comments, setComments] = useState([])
     const { productId } = useParams();
 
     useEffect(() => {
         productService.getOne(productId)
             .then(setProduct)
+
+            commentService.getAll()
+                .then(setComments)
     },[productId]);
 
     const addCommentHandler = async(e) => {
@@ -25,7 +29,7 @@ export default function ProductDetails() {
             formData.get('comment')
         );
 
-        console.log(createComment);
+        setComments(state => [...state, createComment])
     }
 
     return(
@@ -44,11 +48,16 @@ export default function ProductDetails() {
                <div className="details-comments">
                         <h2>Comments:</h2>
                         <ul>
-                            <li className="comment">
-                                <p>Content: I rate this one quite higly</p>
-                            </li>
+                            {comments.map(({_id,username, text}) => (
+                                <li key={_id} className="comment">
+                                    <p>{username}: {text}</p>
+                                </li>
+                            ))}
                         </ul>
-                        <p className="no-comment">No comments.</p>
+
+                        {comments.length === 0 && (
+                            <p className="no-comment">No comments.</p>
+                        )}
                     </div>
 
              <article className="create-comment">
