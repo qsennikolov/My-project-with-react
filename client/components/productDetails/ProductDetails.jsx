@@ -1,11 +1,14 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
 import * as productService from '../services/productService';
 import * as commentService from '../services/commentService';
 
+import AuthContext from "../contexts/authContext";
+
 
 export default function ProductDetails() {
+    const {email, userId } = useContext(AuthContext)
     const [product, setProduct] = useState({})
     const [comments, setComments] = useState([])
     const { productId } = useParams();
@@ -59,6 +62,13 @@ export default function ProductDetails() {
                             <p className="no-comment">No comments.</p>
                         )}
                     </div>
+
+                    {userId === product._ownerId && (
+                        <div className="buttons">
+                            <a href="#" className="button">Edit</a>
+                            <a href="#" className="button">Delete</a>
+                        </div>
+                    )}
 
              <article className="create-comment">
                 <label>Add new comment:</label>
