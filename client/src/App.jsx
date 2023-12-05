@@ -22,7 +22,11 @@ import ProductDetails from '../components/productDetails/ProductDetails.jsx'
 
 function App() {
     const navigate = useNavigate()
-	const [auth, setAuth] = useState({});
+	const [auth, setAuth] = useState(() => {
+        localStorage.removeItem('accessToken');
+
+        return {};
+    });
 
 	const loginSubmitHandler = async (values) => {
         const result = await authService.login(values.email, values.password);
