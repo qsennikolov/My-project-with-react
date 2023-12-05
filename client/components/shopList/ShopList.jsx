@@ -9,7 +9,10 @@ export default function ShopList() {
 
    useEffect(() =>{
       productServices.getAll()
-         .then(result => setProduct(result));
+         .then(result => setProduct(result))
+         .catch(err => {
+            alert(err);
+         })
    }, [])
 
     return (

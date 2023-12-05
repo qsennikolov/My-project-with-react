@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import AuthContext from "../contexts/authContext.js";
+import AuthContext from "../contexts/authContext";
 import useForm from "../../hooks/useForm";
 
 const RegisterFormKeys = {
@@ -51,6 +51,7 @@ export default function Register() {
 				type="password" 
 				name="password" 
 				id="register-password"
+				placeholder="type password"
 				onChange={onChange}
 				values={values[RegisterFormKeys.Password]}
 				/>
@@ -60,6 +61,7 @@ export default function Register() {
 				type="password" 
 				name="confirm-password" 
 				id="confirm-password"
+				placeholder="type password"
 				onChange={onChange}
 				values={values[RegisterFormKeys.ConfirmPassword]}
 				/>
