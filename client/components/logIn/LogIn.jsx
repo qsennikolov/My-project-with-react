@@ -51,8 +51,12 @@ export default function Login () {
                 />
             </div>
 
+
                 <input type="submit" className='btn submit' value="Login"></input>
 
+                <p className="field">
+                    <span>If you don't have profile click <a href="/register">Here</a></span>
+                </p>
             </div>
         </form>
     </section>

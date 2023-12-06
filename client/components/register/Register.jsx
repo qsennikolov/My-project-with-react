@@ -72,7 +72,7 @@ export default function Register() {
                 <input className="btn submit" type="submit"  value="Register"/>
 
                 <p className="field">
-                    <span>If you have already have profile click <a href="/login">here</a></span>
+                    <span>If you have already profile click <a href="/login">Here</a></span>
                 </p>
             </div>
         </form>
