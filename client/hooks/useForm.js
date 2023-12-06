@@ -1,11 +1,12 @@
 import { useEffect, useMemo, useState } from "react"
 
 
-export default function useForm(submitHandler,initialValue) {
-    const[values, setValues] = useState(initialValue)
-    const initialValues = useMemo(() => ({
-        values: ''
-    }), [])
+export default function useForm(submitHandler,initialValues) {
+    const[values, setValues] = useState(initialValues);
+    
+    // const initialValues = useMemo(() => ({
+    //     values: ''
+    // }), [setValues])
 
     useEffect(() => {
       setValues(initialValues);
@@ -23,7 +24,7 @@ export default function useForm(submitHandler,initialValue) {
 
         submitHandler(values);
     };
-
+    
     return {
         values,
         onChange,
