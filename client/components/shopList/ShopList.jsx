@@ -11,7 +11,7 @@ export default function ShopList() {
       productServices.getAll()
          .then(result => setProduct(result))
          .catch(err => {
-            alert(err);
+            alert(err)
          })
    }, [])
 
@@ -24,11 +24,12 @@ export default function ShopList() {
                      </div>
                   </div>
 
+                  {products.length == 0 && <h3 className="no-articles">No product yet</h3>}
+
                   {products.map(product => (
                      <ShopListItem key={product._id} {...product}/>
                   ))}
 
-                  {products.length === 0 && <h3 className="no-articles">No product yet</h3>}
                   {/* <div className="service_section_2">
                      <div className="row2">
                         <div className="col">

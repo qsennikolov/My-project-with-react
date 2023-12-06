@@ -14,9 +14,14 @@ export const getOne = async (productId) => {
     return result;
 }
 
-
 export const create = async (productData) => {
     const result = await request.post(baseUrl, productData)
 
     return result;
+};
+
+export const edit = async (productId, productData) => {
+  const result = await request.put(`${baseUrl}/${productId}`, productData);
+
+  return result;
 };

@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 import * as productService from '../services/productService';
 import * as commentService from '../services/commentService';
@@ -65,8 +65,8 @@ export default function ProductDetails() {
 
                     {userId === product._ownerId && (
                         <div className="buttons">
-                            <a href="#" className="button">Edit</a>
-                            <a href="#" className="button">Delete</a>
+                            <Link to={`/product/details/${productId}/edit`} className="button">Edit</Link>
+                            <Link to="/product/details/:productId/delete" className="button">Delete</Link>
                         </div>
                     )}
 

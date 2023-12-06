@@ -15,6 +15,7 @@ import Register from '../components/register/Register.jsx'
 import CreateProduct from '../components/createproduct/CreateProduct.jsx'
 import Logout from '../components/logout/Logout.jsx'
 import ProductDetails from '../components/productDetails/ProductDetails.jsx'
+import ProductEdit from '../components/productEdit/ProductEdit.jsx'
 
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
             <Route path='register' element= { < Register />} />
             <Route path ='/Logout' element= { <Logout /> } />
             <Route path='/product/details/:productId' element={<ProductDetails />} />
+            <Route path='/product/details/:productId/edit' element={<ProductEdit />} />
         </Routes>
     <Footer />
 
