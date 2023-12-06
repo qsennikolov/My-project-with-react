@@ -16,6 +16,7 @@ import CreateProduct from '../components/createproduct/CreateProduct.jsx'
 import Logout from '../components/logout/Logout.jsx'
 import ProductDetails from '../components/productDetails/ProductDetails.jsx'
 import ProductEdit from '../components/productEdit/ProductEdit.jsx'
+import AuthGuard from '../components/guard/AuthGuard.jsx'
 
 
 function App() {
@@ -30,12 +31,15 @@ function App() {
             <Route path='/blog' element={ <Blog />} />
             <Route path='/shopList' element= { <ShopList />} />
             {/* <Route path='/appdownload' element= {<Appdownload />} /> */}
-            <Route path='/createProduct' element={ <CreateProduct />} />
             <Route path='/login' element= { <Login /> } />
             <Route path='register' element= { < Register />} />
-            <Route path ='/Logout' element= { <Logout /> } />
-            <Route path='/product/details/:productId' element={<ProductDetails />} />
-            <Route path='/product/details/:productId/edit' element={<ProductEdit />} />
+
+            <Route element={<AuthGuard />}>
+                <Route path='/createProduct' element={ <CreateProduct />} />
+                <Route path='/product/details/:productId' element={<ProductDetails />} />
+                <Route path='/product/details/:productId/edit' element={<ProductEdit />} />
+                <Route path ='/Logout' element= { <Logout /> } />
+            </Route>
         </Routes>
     <Footer />
 

@@ -14,7 +14,7 @@ export default function Login () {
         [LoginFormKeys.Email]:"",
         [LoginFormKeys.Password]: "",
     });
-
+    
   return (
      <section id= "login-page" className="auth">
         <form id="login" onSubmit={onSubmit}>
@@ -31,7 +31,7 @@ export default function Login () {
                 name={LoginFormKeys.Email}
                 placeholder="enter e-mail "
                 onChange={onChange}
-                value={values[LoginFormKeys.Email]}
+                values={values[LoginFormKeys.Email]}
                 />
             </div>
                 
@@ -44,7 +44,7 @@ export default function Login () {
                  name={LoginFormKeys.Password}
                  id="login-password"
                 onChange={onChange}
-                value={values[LoginFormKeys.Password]}
+                values={values[LoginFormKeys.Password]}
                 />
             </div>
 

@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, Navigate, useNavigate, useParams } from "react-router-dom";
 
 import * as productService from '../services/productService';
 import * as commentService from '../services/commentService';
@@ -8,6 +8,7 @@ import AuthContext from "../contexts/authContext";
 
 
 export default function ProductDetails() {
+    const navigate = useNavigate()
     const {email, userId } = useContext(AuthContext)
     const [product, setProduct] = useState({})
     const [comments, setComments] = useState([])
@@ -33,6 +34,16 @@ export default function ProductDetails() {
         );
 
         setComments(state => [...state, createComment])
+    }
+
+    const deleteButtonClickHandler = async () => {
+        const hasConfirmed = confirm(`Are you sure you want to delete ${product.title}`);
+
+        if(hasConfirmed){
+            await productService.remove(productId);
+
+            navigate('/shopList')
+        }
     }
 
     return(
@@ -66,7 +77,7 @@ export default function ProductDetails() {
                     {userId === product._ownerId && (
                         <div className="buttons">
                             <Link to={`/product/details/${productId}/edit`} className="button">Edit</Link>
-                            <Link to="/product/details/:productId/delete" className="button">Delete</Link>
+                            <Link to="/shopList" className="button" onClick={deleteButtonClickHandler}>Delete</Link>
                         </div>
                     )}
 
@@ -74,7 +85,7 @@ export default function ProductDetails() {
                 <label>Add new comment:</label>
                 <form className="form" onSubmit={addCommentHandler}>
                     <input type="text" name="username" placeholder="username" />
-                    <textarea name="comment" placeholder="Comment......."></textarea>
+                    <textarea name="comment"  placeholder="Comment......."></textarea>
                     <input className="btn submit" type="submit" value="Add Comment" />
                 </form>
              </article>
