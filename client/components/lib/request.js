@@ -1,22 +1,22 @@
 const buildOptions = (data) => {
   const options = {};
-
+  
   if (data) {
     options.body = JSON.stringify(data);
     options.headers = {
       "content-type": "application/json",
     };
   }
-
+  
   const token = localStorage.getItem('accessToken')
-
+  
   if(token){
-	options.headers = {
-		...options.headers,
-		'X-Authorization': token 
-	}
+    options.headers = {
+      ...options.headers,
+      'X-Authorization': token 
+	  }
   }
-
+  
   return options;
 };
 
@@ -25,13 +25,13 @@ export const request = async (method, url, data) => {
     ...buildOptions(data),
     method,
   });
-
+  
   if (response.status === 204){
     return {};
   }
-
+  
   const result = await response.json();
-
+  
   return result;
 };
 

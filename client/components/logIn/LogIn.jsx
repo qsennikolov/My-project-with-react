@@ -1,7 +1,7 @@
+import '../logIn/login.css'
 import { useContext, useMemo } from 'react';
 import useForm from '../../hooks/useForm';
 import AuthContext from '../contexts/authContext';
-import './login.style.css'
 
 const LoginFormKeys = {
     Email: 'email',
@@ -52,10 +52,10 @@ export default function Login () {
             </div>
 
 
-                <input type="submit" className='btn submit' value="Login"></input>
+                <input type="submit" className='login_btn' value="Login"></input>
 
-                <p className="field">
-                    <span>If you don't have profile click <a href="/register">Here</a></span>
+                <p className="field_login">
+                    <span>If you don't have profile click <a href="/register">here</a></span>
                 </p>
             </div>
         </form>

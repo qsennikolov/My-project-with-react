@@ -1,0 +1,60 @@
+.container_register{
+    display: flex;
+    flex-direction: column;
+}
+
+.register-page, h1{
+    font-size: 52px;
+    text-align: center;
+    color: white;
+    text-decoration: solid;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.container_register #email{
+    font-size: 20px;
+    margin-left: 4.8em;
+    margin-bottom: 1em;
+}
+
+.register_username #username{
+    margin-left: 1.9em;
+    margin-bottom: 1em;
+}
+
+.register_password #register-password{
+    margin-left: 2.3em;
+    margin-bottom: 1em;
+}
+
+.container_register label {
+    font-size: 28px;
+    color: white;
+}
+
+.container_register, input{
+    font-size: 2em;
+}
+
+.register_btn {
+    margin-top: 1.5em;
+    margin-left: 5em;
+    margin-right: 5em;
+    height: 2em;
+    border-radius: 3em;
+}
+
+.register_btn:hover {
+    background-color: #8eb50b;
+    color: white;
+}
+
+.field_register, span {
+    font-size: 1.2em;
+    margin-left: 3.6em;
+}
+
+.field_register{
+    margin-top: 3em;
+}

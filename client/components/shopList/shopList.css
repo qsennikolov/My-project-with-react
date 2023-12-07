@@ -1,0 +1,68 @@
+.service_section_2 {
+    width: 20%;
+    float: left;
+    padding-left: 30px;
+    padding-bottom: 20em;
+}
+
+.service_section{
+    max-width: 100%;
+    float: left;
+    padding-top: 16px;
+}
+
+.breakfast_text {
+    width: 100%;
+    font-size: 26px;
+    color: #fcfcfd;
+    text-align: center;
+    margin: 0em;
+    font-weight: bold;
+    padding-top: 15px;
+    padding-bottom: 0.5em;
+}
+
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.service_taital {
+    width: 150%;
+    font-size: 40px;
+    color: #fefbfb;
+    text-align: center;
+    padding-left: 70%;
+}
+
+.breakfast_img img {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    height: 240px;
+    
+
+}
+
+.details_btn {
+    padding-top: 0.5em
+}
+
+.details_btn a {
+        background-color: rgb(217, 214, 214);
+        border: none;
+        color: black;
+        padding: 5px 30px;
+        text-decoration: none;
+        font-size: 20px;
+        border-radius: 1em;
+        font-weight: bold;
+        margin-left: 3em;
+}
+
+.details_btn a:hover{
+    color: #8eb50b;
+}

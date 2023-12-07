@@ -1,0 +1,45 @@
+.edit_product {
+    display: flex;
+    justify-content: center;
+}
+
+.product_edit {
+    display: flex;
+    flex-direction: column;
+}
+
+.product_edit label {
+    font-size: 6.5em;
+    color: white;
+    margin-top: 0.5em;
+}
+
+.product_edit input {
+    border-radius: 1em;
+    font-size: 4em;
+    height: 2em;
+}
+
+.product_edit,
+input,
+::placeholder {
+    padding-left: 0.5em;
+}
+
+
+.product_edit textarea {
+    font-size: 4em;
+    height: 6em;
+    border-radius: 0.5em;
+}
+
+.btn-submit {
+    margin-top: 2em;
+}
+
+
+.btn-submit:hover {
+    background-color: #8eb50b;
+    color: white;
+}
+

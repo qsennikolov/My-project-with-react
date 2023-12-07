@@ -1,3 +1,6 @@
+import "../footer/footer.css"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+
 const Footer = () => {
     return(
 //   <!-- footer section start -->
@@ -7,7 +10,7 @@ const Footer = () => {
                      <div className="row-footer">
                         <div className="col-lg-3 col-md-6">
                            <h2 className="footer_logo">Foodfinda</h2>
-                           <p className="footer_text">t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of </p>
+                           <p className="footer_text">The best site to find the incredible drinks and something so delicious to eat! </p>
                         </div>
                         {/* <div className="col-lg-3 col-md-6"> */}
                            {/* <h2 className="useful_text"></h2> */}
@@ -24,13 +27,17 @@ const Footer = () => {
                         <div className="col-lg-3 col-md-6">
                            <h2 className="useful_text">Contact Info</h2>
                            <p className="address_text">Office Address</p>
-                           <div className="map_icon"><a href="#"><i className="fa fa-map-marker" aria-hidden="true"></i><span className="padding_left15">Loram ipusm New York, NY 36524</span></a></div>
+                           <div className="map_icon"><a href="#"><i className="fa fa-map-marker" aria-hidden="true"></i><span className="padding_left15"> New York, NY 36524</span></a></div>
                            <p className="address_text">Customer Service:</p>
-                           <div className="map_icon"><a href="#"><i className="fa fa-phone" aria-hidden="true"></i><span className="padding_left15">( +01 1234567890 )</span></a></div>
+                           <div className="map_icon">
+                              <a href="#"><FontAwesomeIcon icon="fa-solid fa-location-dot" />
+                                 <span className="padding_left15">( +01 1234567890 )</span>
+                              </a>
+                           </div>
                            <div className="map_icon"><a href="#"><i className="fa fa-envelope" aria-hidden="true"></i><span className="padding_left15">demo@gmail.com</span></a></div>
                         </div>
                         <div className="col-lg-3 col-md-6">
-                           <h2 className="useful_text">Discover</h2>
+                           <h2 className="useful_text_discover">Discover</h2>
                            <div className="subscribe_menu">
                               <ul>
                                  <li><a href="#">Help</a></li>

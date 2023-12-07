@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import * as productService from '../services/productService'
 
-import '../createproduct/createProduct.module.css'
+import './createProduct.css'
 
 export default function CreateProduct() {
     const navigate = useNavigate();
@@ -35,12 +35,12 @@ export default function CreateProduct() {
                     <label htmlFor="price">Price:</label>
                     <input type="text" id="price" name="price" placeholder="Enter product price"/>
 
-                    <label htmlFor="product-img">Image:</label>
+                    <label htmlFor="imageUrl">Image:</label>
                     <input type="text" id="imageUrl" name="imageUrl" placeholder="Upload a photo..."/>
 
                     <label htmlFor="description">Description:</label>
                     <textarea type="text" id="description" name="description" placeholder="Enter product description"></textarea>
-                    <input className="btn submit" type="submit" value='Create Product' />               
+                    <input className="create_btn" type="submit" value='Create Product' />               
                 </div>
             </form>
        </section>

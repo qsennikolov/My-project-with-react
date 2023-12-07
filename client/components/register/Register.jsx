@@ -1,3 +1,4 @@
+import '../register/register.css'
 import { useContext, useMemo } from "react";
 import AuthContext from "../contexts/authContext";
 import useForm from "../../hooks/useForm";
@@ -21,13 +22,14 @@ export default function Register() {
 
 	const {values, onChange, onSubmit} = useForm(registerSubmitHandler, initialValues)
 
+	
   return (
     <section id= "register-page" className="content auth">
         <form id="register" onSubmit={onSubmit}>
-            <div className="container">
+            <div className="container_register">
                 <div className="brand-logo"></div>
-                <h1>Register</h1>
-
+                <h1>Sing Up</h1>
+			<div className='register_email'>
                 <label htmlFor="email">Email:</label>
                 <input 
 				 type="email"
@@ -37,7 +39,9 @@ export default function Register() {
 				 onChange={onChange}
 				 values={values[RegisterFormKeys.Email]}
 				 />
+			</div>
 
+			<div className='register_username'>
 				 <label htmlFor="username">Username:</label>
                 <input 
 				 type="username"
@@ -47,8 +51,9 @@ export default function Register() {
 				 onChange={onChange}
 				 values={values[RegisterFormKeys.Username]}
 				 />
-
+			</div>
                 
+			<div className='register_password'>
                 <label htmlFor="pass">Password:</label>
                 <input 
 				type="password" 
@@ -58,8 +63,10 @@ export default function Register() {
 				onChange={onChange}
 				values={values[RegisterFormKeys.Password]}
 				/>
+			</div>
 
-                <label htmlFor="con-pass">Confirm Password:</label>
+			<div className='register_copassword'>
+                <label htmlFor="con-pass">Co-Password:</label>
                 <input 
 				type="password" 
 				name="confirm-password" 
@@ -68,11 +75,14 @@ export default function Register() {
 				onChange={onChange}
 				values={values[RegisterFormKeys.ConfirmPassword]}
 				/>
+			</div>
 
-                <input className="btn submit" type="submit"  value="Register"/>
 
-                <p className="field">
-                    <span>If you have already profile click <a href="/login">Here</a></span>
+			
+                <input className="register_btn" type="submit"  value="Register"/>
+
+                <p className="field_register">
+                    <span>If you have already profile click <a href="/login">here</a></span>
                 </p>
             </div>
         </form>

@@ -1,0 +1,53 @@
+.navbar,
+navbar-light,
+bg-light,
+justify-content-between {
+    display: flex;
+    justify-content: center;
+}
+
+.padding_left10{
+    color: white;
+    margin-left: 1em;
+}
+
+.login_text a {
+    font-size: 14px;
+    color: #ffffff;
+    float: left;
+    background-color: #252525;
+    padding: 24px 10px;
+}
+
+.login_text {
+    margin-left: 30px;
+    position: relative;
+    left: 50em;
+}
+
+.form-inline {
+    margin-right: 40px;
+    position: relative;
+    right: 100em;
+}
+
+.details_btn, a{
+    font-size: 20px;
+}
+
+.login_text a:hover {
+    color: #8eb50b;
+}
+
+.row2 {
+    display: flex;
+    margin-left: 0%;
+}
+
+.row-footer {
+    display: flex;
+}
+
+.logo img{
+    margin-right: 3em;
+}

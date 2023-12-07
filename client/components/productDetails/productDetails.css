@@ -1,0 +1,159 @@
+.product-img{
+    max-height: 60em;
+    padding-left: 30em;
+}
+
+#product-details, h1{
+    margin-top: 3em;
+}
+
+.product-header, h1{
+    margin-left: 3em;
+    margin-top: 0em;
+}
+.info-section{
+    display: flex;
+    flex-direction: row;
+    max-width: 100%;
+}
+
+.about_product{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: baseline;
+    color: white;
+    padding-bottom: 4em;
+}
+.type{
+    font-size: 6em;
+    margin-right: 9em;
+    margin-left: 0em;
+}
+
+.price{
+    font-size: 6em;
+    color: white;
+    margin-left: 1.2em;
+    font-weight: 300;
+}
+
+.description {
+    font-size: 6em;
+}
+
+.details-comments {
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+.details-comments h2{
+    color: #8eb50b;
+    font-size: 10em;
+    margin-bottom: 0em;
+    margin-left: 0.7em;
+}
+
+.details-comments li{
+    color: #8eb50b;
+    font-size: 4.5em;
+}
+
+.details-comments ul{
+    list-style-type: none;
+    height: 12em;
+}
+
+
+.create-comment{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-right: 140em;
+    margin-top: 3em;
+}
+
+.button-edit{
+    background-color: rgb(219, 218, 218);
+    color: black;
+    width: 5em;
+    margin-right: 6em;
+    margin-left: 5em;
+    border-radius: 3em;
+}
+
+.button-delete {
+    background-color: rgb(219, 218, 218);
+    color: black;
+    width: 5em;
+    margin-right: 6em;
+    margin-left: 5em;
+    border-radius: 3em;
+}
+
+.button-edit{
+    padding-left: 1.5em ;
+}
+
+.button-delete{
+    padding-left: 1em;
+}
+
+.button-edit:hover{
+    background-color: #8eb50b;
+    color: white;
+}
+
+.button-delete:hover{
+    background-color: #8eb50b;
+    color: white;
+}
+
+.create-comment label{
+    font-size: 9em;
+    color: white;
+}
+
+.comment-username{
+    font-size: 2.5em;
+    padding-bottom: 2em;
+    margin-right: 1.5em;
+}
+
+.comment-username input{
+    width: 15em;
+}
+
+.new-comment textarea{
+    font-size: 5.5em;
+    height: 6em;
+    width: 14em;
+    border-radius: 0.5em;
+}
+
+.no-comment {
+    color: #8eb50b;
+    font-size: 7em;
+    margin-bottom: 0em;
+    margin-left: 0.7em;
+    font-weight: bold;
+}
+
+.btn-comment{
+    font-size: 5em;
+    margin-top: 1em;
+    margin-left: 1em;
+    width: 10em;
+}
+
+.btn-comment:hover{
+    background-color: #8eb50b;
+    color: white;
+}

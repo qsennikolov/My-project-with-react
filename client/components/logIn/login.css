@@ -1,0 +1,91 @@
+#root{
+    width: 100%;
+        background-color: rgb(18, 18, 18, 0.9);
+        background-size: cover;
+        float: left;
+}
+
+.auth{
+    display: flex;
+    justify-content: center;
+    /* padding-top: 10em; */
+    
+}
+
+.container-login{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    /* width: 150em; */
+}
+
+.container-login h1 {
+    font-size: 52px;
+    text-align: center;
+    /* color: #8eb50b; */
+    color: white;
+    text-decoration: solid;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.email-line{
+    font-size: 9em;
+    color: white;
+    width: 17em;
+    margin-left: 3em;
+    margin-top: 0em;
+    margin-bottom: 1em;
+}
+
+.email-line, input, ::placeholder {
+    border-radius: 1em;
+    height: 2em;
+}
+
+.password-line{
+    font-size: 9em;
+    color: white;
+    margin-left: 2.9em;
+    
+}
+
+.container-login , #email{
+    font-size: 0.7em;
+    margin-left: 2.6em;
+}
+
+#login-password{
+    font-size: 0.7em;
+}
+
+label{
+    padding-right: 0.5em;
+}
+
+
+.login_btn{
+    font-size: 6em;
+    max-width: 9em;
+    margin-left: 9em;
+    margin-top: 2.5em;
+    border-radius: 3em;
+    height: 1.5em;
+}
+
+.login_btn:hover{
+    background-color: #8eb50b;
+    color: white;
+}
+
+.field_login, span{
+    font-size: 14px;
+    margin-left: 5em;
+    font-weight: bold;
+    color: grey;
+}
+
+.field_login, a {
+    text-decoration: none;
+    
+}

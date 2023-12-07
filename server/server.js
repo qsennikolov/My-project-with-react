@@ -1754,6 +1754,28 @@
         _createdOn: 1701850602141,
         _id: "e6cd76e0-1ede-4d17-b09c-48089dee58fd",
       },
+      "a026b2de-dcf3-41a6-9a91-fe38f90acae3": {
+        _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
+        title: "Cappucino",
+        category: "Drink",
+        price: "3.0",
+        imageUrl:
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Cappuccino_at_Sightglass_Coffee.jpg/1200px-Cappuccino_at_Sightglass_Coffee.jpg",
+        description: "Good looking drink!",
+        _createdOn: 1701935463666,
+        _id: "a026b2de-dcf3-41a6-9a91-fe38f90acae3",
+      },
+      "c0b2ff61-b252-4db7-9dfc-f4d77a670345": {
+        _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
+        title: "Chocolate Laye Cake",
+        category: "Dessert",
+        price: "5.0",
+        imageUrl:
+          "https://sallysbakingaddiction.com/wp-content/uploads/2013/04/triple-chocolate-cake-4.jpg",
+        description: "It's look so delicious!",
+        _createdOn: 1701935685147,
+        _id: "c0b2ff61-b252-4db7-9dfc-f4d77a670345",
+      },
     },
   };
   var rules$1 = {

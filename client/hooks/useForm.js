@@ -1,13 +1,9 @@
-import { useEffect, useMemo, useState } from "react"
+import { useEffect, useState } from "react"
 
 
 export default function useForm(submitHandler,initialValues) {
     const[values, setValues] = useState(initialValues);
     
-    // const initialValues = useMemo(() => ({
-    //     values: ''
-    // }), [setValues])
-
     useEffect(() => {
       setValues(initialValues);
     }, [initialValues]);
@@ -23,7 +19,17 @@ export default function useForm(submitHandler,initialValues) {
         e.preventDefault();
 
         submitHandler(values);
+        
+        // console.log(values);
+        
     };
+    // if(values.email.length == 0){
+    //    return alert('Email field must not be empty!')
+    // }else if (values.username.length == 0){
+    //    return alert("Username field must not be empty!");
+    // }else if(values.password.length < 3){
+    //     return alert("Password field must be at least 3 symbols!")
+    // }
     
     return {
         values,

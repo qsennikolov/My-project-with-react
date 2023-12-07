@@ -1,3 +1,4 @@
+import "./Home.css"
 
 const Home = () => {
 return (
@@ -9,8 +10,8 @@ return (
                         <div className="container">
                            <div className="row">
                               <div className="col-md-12">
-                                 <h1 className="banner_taital">Find The Best Restaurants Cafes And Bars in </h1>
-                                 <h1 className="banner_text">YOUR CITY</h1>
+                                 <h1 className="banner_taital">The Best Shop To Found What You Want to</h1>
+                                 <h1 className="banner_text"> Drink or Eat</h1>
                                  <div className="banner_main">
                                     <div className="dropdown">
                                        {/* <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">All Category  */}

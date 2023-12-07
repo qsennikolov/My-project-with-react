@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import './shopList.module.css'
+import './shopList.css'
 
 import * as productServices from '../services/productService';
 import ShopListItem from "./shopListItem/shopListItem.jsx";
@@ -20,7 +20,7 @@ export default function ShopList() {
                <div className="container">
                   <div className="row2">
                      <div className="col-sm-12">
-                        <h1 className="service_taital">All Products</h1>
+                        <h1 className="service_taital">ALL PRODUCTS</h1>
                      </div>
                   </div>
 
@@ -29,53 +29,6 @@ export default function ShopList() {
                   {products.map(product => (
                      <ShopListItem key={product._id} {...product}/>
                   ))}
-
-                  {/* <div className="service_section_2">
-                     <div className="row2">
-                        <div className="col">
-                           <div className="service_box">
-                              <div className="breakfast_img"><img src="../../src/assets/images/breakfast-img.png"/></div>
-                           </div>
-                           <h4 className="breakfast_text">Breakfast</h4>
-                           <div className="seemore_bt"><a href="#">See More</a></div>
-                        </div>
-                        <div className="col">
-                           <div className="service_box">
-                              <div className="dessert_img"><img src="../../src/assets/images/dss.png"/></div>
-                           </div>
-                           <h4 className="breakfast_text">Desserts</h4>
-                           <div className="seemore_bt"><a href="#">See More</a></div>
-                        </div>
-                        <div className="col">
-                           <div className="service_box">
-                              <div className="breakfast_img"><img src="../../src/assets/images/dinner-img.png"/></div>
-                           </div>
-                           <h4 className="breakfast_text">Dinner</h4>
-                           <div className="seemore_bt"><a href="#">See More</a></div>
-                        </div>
-                        <div className="col">
-                           <div className="service_box">
-                              <div className="breakfast_img"><img src="../../src/assets/images/coffee-img.png"/></div>
-                           </div>
-                           <h4 className="breakfast_text">Coffee</h4>
-                           <div className="seemore_bt"><a href="#">See More</a></div>
-                        </div>
-                        <div className="col">
-                           <div className="service_box">
-                              <div className="breakfast_img"><img src="../../src/assets/images/alcohol-img.png"/></div>
-                           </div>
-                           <h4 className="breakfast_text">Alcohol</h4>
-                           <div className="seemore_bt"><a href="#">See More</a></div>
-                        </div>
-                        <div className="col">
-                           <div className="service_box">
-                              <div className="breakfast_img"><img src="../../src/assets/images/diningtable-img.png"/></div>
-                           </div>
-                           <h4 className="breakfast_text">Diningtable</h4>
-                           <div className="seemore_bt"><a href="#">See More</a></div>
-                        </div>
-                     </div>
-                  </div> */}
                </div>
             </div>
     )

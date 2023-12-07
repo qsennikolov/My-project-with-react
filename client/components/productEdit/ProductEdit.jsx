@@ -1,4 +1,4 @@
-import '../createproduct/createProduct.module.css'
+import "../productEdit/ProductEdit.css"
 
 import { useNavigate, useParams } from 'react-router-dom';
 
@@ -37,9 +37,9 @@ export default function ProductEdit() {
   const { values, onChange, onSubmit } = useForm(editProductSubmitHandler, product);
 
     return (
-        <section id='create-page' className="auth">
+        <section id='create-page' className="edit_product">
             <form id="create" onSubmit={onSubmit}>
-                <div className="product_container">
+                <div className="product_edit">
                     <h1>Edit Product</h1>
                     <label htmlFor="leg-title">Product Name:</label>
                     <input type="text" id="title" name="title" value={values.title} onChange={onChange} placeholder="Enter product name"/>
@@ -50,12 +50,12 @@ export default function ProductEdit() {
                     <label htmlFor="price">Price:</label>
                     <input type="text" id="price" name="price" value={values.price} onChange={onChange} placeholder="Enter product price"/>
 
-                    <label htmlFor="product-img">Image:</label>
-                    <input type="text" id="imageUrl" name="product-img" value={values.imageUrl} onChange={onChange} placeholder="Upload a photo..."/>
+                    <label htmlFor="imageUrl">Image:</label>
+                    <input type="text" id="imageUrl" name="imageUrl" value={values.imageUrl} onChange={onChange} placeholder="Upload a photo..."/>
 
                     <label htmlFor="description">Description:</label>
                     <textarea type="text" value={values.description} onChange={onChange} id="description" name="description" placeholder="Enter product description"></textarea>
-                    <input className="btn submit" name='create-product' type="submit" value='Edit Product' />               
+                    <input className="btn-submit" name='create-product' type="submit" value='Edit Product' />               
                 </div>
             </form>
        </section>

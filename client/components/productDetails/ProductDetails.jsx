@@ -1,3 +1,4 @@
+import "../productDetails/productDetails.css"
 import { useContext, useEffect, useState } from "react";
 import { Link, Navigate, useNavigate, useParams } from "react-router-dom";
 
@@ -53,40 +54,49 @@ export default function ProductDetails() {
                 <div className="product-header">
                     <h1>{product.title}</h1>
                     <img className="product-img" src={product.imageUrl} alt={product.title} />
+                </div>
+                <div className="about_product">
                     <p className="type">Type: {product.category}</p>
                     <span className="price">Price: {product.price}$</span>
+                <p className="description">Description: {product.description}</p>
                 </div>
-                <p className="text">Description: {product.description}</p>
             </div>
+                        {userId === product._ownerId && (
+                            <div className="buttons">
+                                <Link to={`/product/details/${productId}/edit`} className="button-edit">Edit</Link>
+                                <Link to="/shopList" className="button-delete" onClick={deleteButtonClickHandler}>Delete</Link>
+                            </div>
+                        )}
 
                <div className="details-comments">
                         <h2>Comments:</h2>
-                        <ul>
                             {comments.map(({_id,username, text}) => (
-                                <li key={_id} className="comment">
-                                    <p>{username}: {text}</p>
-                                </li>
-                            ))}
+                                <ul key={_id}>
+                            <li className="comment">
+                                <p>{username}: {text}</p>
+                            </li>
                         </ul>
+                            ))}
 
                         {comments.length === 0 && (
                             <p className="no-comment">No comments.</p>
-                        )}
+                            )}
                     </div>
 
-                    {userId === product._ownerId && (
-                        <div className="buttons">
-                            <Link to={`/product/details/${productId}/edit`} className="button">Edit</Link>
-                            <Link to="/shopList" className="button" onClick={deleteButtonClickHandler}>Delete</Link>
-                        </div>
-                    )}
 
              <article className="create-comment">
                 <label>Add new comment:</label>
                 <form className="form" onSubmit={addCommentHandler}>
-                    <input type="text" name="username" placeholder="username" />
-                    <textarea name="comment"  placeholder="Comment......."></textarea>
-                    <input className="btn submit" type="submit" value="Add Comment" />
+
+                    <div className="comment-username">
+                        <input type="text" name="username" placeholder="username" />
+                    </div>
+
+                    <div className="new-comment">
+                        <textarea name="comment"  placeholder="Comment......."></textarea>
+                    </div>
+                    
+                    <input className="btn-comment" type="submit" value="Add Comment" />
                 </form>
              </article>
         </section>
