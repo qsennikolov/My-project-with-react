@@ -1,0 +1,41 @@
+.news{
+    font-size: 45px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 0.5em;
+    margin-right: 2em;
+}
+
+.product{
+    font-size: 26px;
+    color: #8eb50b;
+    margin-bottom: 0.2em;
+    margin-left: 0em;
+    text-align: center;
+
+}
+.service-product img{
+    max-height: 250px;
+    margin-left: 8em;
+}
+
+.product-btn a{
+    color: black;
+    padding-left: 1em;
+    font-size: 20px;
+    font-weight: bold;
+}
+.product-btn{
+    background-color: rgb(217, 214, 214);
+    max-width: 27em;
+    border-radius: 4em;
+    margin-left: 17em;
+    margin-top: 2em;
+}
+.product-btn:hover{
+    background-color: #8eb50b;
+}
+
+.container-product{
+    display: flex;
+}
