@@ -11,7 +11,7 @@ const NewProducts = () => {
                <div className="row-pr">
                   <div className="service-product">
                      <h2 className="product">Birthday Cake</h2>
-                     <img src="https://handletheheat.com/wp-content/uploads/2015/03/Best-Birthday-Cake-with-milk-chocolate-buttercream-SQUARE.jpg"/>
+                     <img src="../../dist/assets/cake.webp"/>
                      <div className="product-btn">
                         <a href="/shopList">Shop List</a>
                      </div>
@@ -23,7 +23,7 @@ const NewProducts = () => {
                <div className="row-pr">
                   <div className="service-product">
                      <h2 className="product">Espresso</h2>
-                     <img src="https://neurosciencenews.com/files/2023/06/coffee-brain-caffeine-neuroscincces.jpg"/>
+                     <img src="../../dist/assets/coffee.png"/>
                      <div className="product-btn">
                         <a href="/shopList">Shop List</a>
                      </div>
@@ -34,7 +34,7 @@ const NewProducts = () => {
                <div className="row-pr">
                   <div className="service-product">
                      <h2 className="product">Fleur Burger</h2>
-                     <img src="https://lifebeyondsportmedia.com/bestanden/Most-expensive-meals/5._Fleur_Burger_at_Fleur.jpg"/>
+                     <img src="../../dist/assets/fleur-burger.jpg"/>
                      <div className="product-btn">
                         <a href="/shopList">Shop List</a>
                      </div>
