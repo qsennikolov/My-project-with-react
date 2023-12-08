@@ -1,11 +1,12 @@
 import "../productDetails/productDetails.css"
 import { useContext, useEffect, useState } from "react";
-import { Link, Navigate, useNavigate, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 
 import * as productService from '../services/productService';
 import * as commentService from '../services/commentService';
 
 import AuthContext from "../contexts/authContext";
+import useForm from "../../hooks/useForm.js";
 
 
 export default function ProductDetails() {
@@ -14,6 +15,11 @@ export default function ProductDetails() {
     const [product, setProduct] = useState({})
     const [comments, setComments] = useState([])
     const { productId } = useParams();
+    const[records, setRecords] = useState([]);
+    const [formValues, setFormValues] = useState({
+        username: "",
+        comment: "",
+    })
 
     useEffect(() => {
         productService.getOne(productId)
@@ -22,18 +28,23 @@ export default function ProductDetails() {
             commentService.getAll(productId)
                 .then(setComments)
     },[productId]);
-
+    
     const addCommentHandler = async(e) => {
         e.preventDefault();
+        setRecords([...records,formValues]);
+        setFormValues({
+            username: "",
+            comment: "",
+        })
 
         const formData= new FormData(e.currentTarget)
         
         const createComment = await commentService.create(
             productId,
             formData.get('username'),
-            formData.get('comment')
+            formData.get('comment'),
             );
-             
+            
         setComments(state => [...state, createComment])
     }
 
@@ -88,11 +99,11 @@ export default function ProductDetails() {
                 <form className="form" onSubmit={addCommentHandler}>
 
                     <div className="comment-username">
-                        <input type="text" name="username" placeholder="username" />
+                        <input type="text" name="username" value={formValues.username} onChange={(e) => setFormValues({...formValues, username: e.target.value})} placeholder="username" />
                     </div>
 
                     <div className="new-comment">
-                        <textarea name="comment"  placeholder="Comment......."></textarea>
+                        <textarea name="comment" value={formValues.comment} onChange={(e) => setFormValues({...formValues, comment: e.target.value})} placeholder="Comment......."></textarea>
                     </div>
                     
                     <input className="btn-comment" type="submit" value="Add Comment" />
