@@ -15,6 +15,7 @@ const Navi = () => {
                    <div className="user">
                      <li className="user_name">Welcome {username}</li>
                      <li><Link to="/home">Home</Link></li>
+                     <li><Link to="/newproducts">New products</Link></li>
                      <li><Link to="/ShopList">Shop List</Link></li>
                      <li><Link to="/createproduct">Create Product</Link></li>
                      <li><Link to="/logout">Log out</Link></li>
