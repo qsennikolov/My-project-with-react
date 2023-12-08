@@ -15,7 +15,7 @@ export default function ShopListItem({
                         <h4 className="breakfast_text">{title}</h4>
                             <img src={imageUrl}/>
                         </div>
-                    </div>
+                    </div>w
                            <div className="details_btn"><Link to={`/product/details/${_id}`}>Details</Link></div>
                 </div>
             </div>

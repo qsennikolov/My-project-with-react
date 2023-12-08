@@ -5,11 +5,11 @@
 
 .register-page, h1{
     font-size: 52px;
-    text-align: center;
     color: white;
     text-decoration: solid;
     margin-top: 0.5em;
     margin-bottom: 0.5em;
+    margin-left: 2em;
 }
 
 .container_register #email{

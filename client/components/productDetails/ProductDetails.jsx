@@ -27,13 +27,13 @@ export default function ProductDetails() {
         e.preventDefault();
 
         const formData= new FormData(e.currentTarget)
-
+        
         const createComment = await commentService.create(
             productId,
             formData.get('username'),
             formData.get('comment')
-        );
-
+            );
+             
         setComments(state => [...state, createComment])
     }
 
@@ -52,7 +52,7 @@ export default function ProductDetails() {
             <h1>Product Details</h1>
             <div className="info-section">
                 <div className="product-header">
-                    <h1>{product.title}</h1>
+                    <h2>{product.title}</h2>
                     <img className="product-img" src={product.imageUrl} alt={product.title} />
                 </div>
                 <div className="about_product">
@@ -77,7 +77,6 @@ export default function ProductDetails() {
                             </li>
                         </ul>
                             ))}
-
                         {comments.length === 0 && (
                             <p className="no-comment">No comments.</p>
                             )}

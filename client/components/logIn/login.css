@@ -20,6 +20,7 @@
 }
 
 .container-login h1 {
+    margin-right: 4em;
     font-size: 52px;
     text-align: center;
     /* color: #8eb50b; */

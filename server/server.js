@@ -1771,7 +1771,7 @@
         category: "Dessert",
         price: "5.0",
         imageUrl:
-          "https://sallysbakingaddiction.com/wp-content/uploads/2013/04/triple-chocolate-cake-4.jpg",
+          "https://img.taste.com.au/hbNtzI2Q/taste/2021/08/clinkers-cake-173208-2.jpg",
         description: "It's look so delicious!",
         _createdOn: 1701935685147,
         _id: "c0b2ff61-b252-4db7-9dfc-f4d77a670345",

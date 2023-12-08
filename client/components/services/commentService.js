@@ -18,6 +18,6 @@ export const create = async (productId, username, text) => {
     username,
     text,
   });
-
+  
   return newComment;
 };
