@@ -1,7 +1,7 @@
+import './createProduct.css'
+
 import { useNavigate } from 'react-router-dom';
 import * as productService from '../services/productService'
-
-import './createProduct.css'
 
 export default function CreateProduct() {
     const navigate = useNavigate();
