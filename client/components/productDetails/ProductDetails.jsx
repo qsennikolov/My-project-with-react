@@ -68,7 +68,7 @@ export default function ProductDetails() {
                 </div>
                 <div className="about_product">
                     <p className="type">Type: {product.category}</p>
-                    <span className="price">Price: {product.price}$</span>
+                    <span className="price">Price: {(Number(product.price)).toFixed(2)}$</span>
                 <p className="description">Description: {product.description}</p>
                 </div>
             </div>

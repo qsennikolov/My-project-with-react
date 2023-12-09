@@ -13,8 +13,6 @@ const NewProducts = () => {
                      <h2 className="product">Birthday Cake</h2>
                      <img src="../../dist/assets/cake.webp"/>
                      <div className="product-btn">
-                        
-            {/* <input className="btn-details" type="submit" value="Shop List"></input> */}
                         <a href="/ShopList">Shop List</a>
                      </div>
                   </div>
@@ -32,11 +30,24 @@ const NewProducts = () => {
                   </div>
                </div>
             </div>
-                          <div className="product-section">
+
+            <div className="product-section">
                <div className="row-pr">
                   <div className="service-product">
                      <h2 className="product">Fleur Burger</h2>
                      <img src="../../dist/assets/fleur-burger.jpg"/>
+                     <div className="product-btn">
+                        <a href="/ShopList">Shop List</a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+              <div className="product-section">
+               <div className="row-pr">
+                  <div className="service-product">
+                     <h2 className="product">Donuts</h2>
+                     <img src="../../dist/assets/donuts.webp"/>
                      <div className="product-btn">
                         <a href="/ShopList">Shop List</a>
                      </div>

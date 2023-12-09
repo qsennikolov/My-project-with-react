@@ -1,5 +1,4 @@
 import "../footer/footer.css"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 const Footer = () => {
     return(
@@ -17,7 +16,7 @@ const Footer = () => {
                            <div className="map_icon"><a href="#"><i className="fa fa-map-marker" aria-hidden="true"></i><span className="padding_left15"> New York, NY 36524</span></a></div>
                            <p className="address_text">Customer Service:</p>
                            <div className="map_icon">
-                              <a href="#"><FontAwesomeIcon icon="fa-solid fa-location-dot" />
+                              <a href="/Login"><i className="fa fa-envelope" aria-hidden="true"></i>
                                  <span className="padding_left15">( +01 1234567890 )</span>
                               </a>
                            </div>
@@ -30,7 +29,7 @@ const Footer = () => {
                                  <li><a href="#">Help</a></li>
                                  <li><a href="#">How It Works</a></li>
                                  <li><a href="#">subscribe</a></li>
-                                 <li><a href="contact.html">Contact Us</a></li>
+                                 <li><a href="#">Contact Us</a></li>
                               </ul>
                            </div>
                         </div>

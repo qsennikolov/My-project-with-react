@@ -1,8 +1,8 @@
 .service_section_2 {
-    width: 20%;
     float: left;
     padding-left: 30px;
     padding-bottom: 20em;
+    margin-left: 2em;
 }
 
 .service_section{
@@ -15,7 +15,7 @@
 .breakfast_text {
     width: 100%;
     font-size: 22px;
-    color: #fcfcfd;
+    color: #8eb50b;
     text-align: center;
     margin: 0em;
     font-weight: bold;
@@ -38,16 +38,12 @@
 }
 
 .breakfast_img img {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 100%;
-    max-height: 300px;
-    
-
+    max-height: 200px;
 }
 
 .details_btn {
-    padding-top: 0.5em
+    padding-top: 0.5em;
+    margin-left: 25%
 }
 
 .details_btn a {
@@ -59,7 +55,6 @@
         font-size: 20px;
         border-radius: 1em;
         font-weight: bold;
-        margin-left: 3em;
 }
 
 .details_btn a:hover{

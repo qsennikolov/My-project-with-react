@@ -1,13 +1,14 @@
 .news{
-    font-size: 45px;
+    font-size: 40px;
     text-align: center;
     text-transform: uppercase;
-    margin-top: 0.5em;
+    margin-top: 1em;
     margin-right: 2em;
+    margin-bottom: 1em;
 }
 
 .product{
-    font-size: 26px;
+    font-size: 24px;
     color: #8eb50b;
     margin-bottom: 0.2em;
     margin-left: 0em;
@@ -15,7 +16,7 @@
 
 }
 .service-product img{
-    max-height: 250px;
+    max-height: 200px;
     margin-left: 8em;
 }
 
@@ -38,4 +39,8 @@
 
 .container-product{
     display: flex;
+}
+
+.service-product{
+    margin-left: 4em;
 }
