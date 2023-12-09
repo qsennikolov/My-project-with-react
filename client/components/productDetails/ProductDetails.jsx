@@ -6,8 +6,6 @@ import * as productService from '../services/productService';
 import * as commentService from '../services/commentService';
 
 import AuthContext from "../contexts/authContext";
-import useForm from "../../hooks/useForm.js";
-
 
 export default function ProductDetails() {
     const navigate = useNavigate()
@@ -47,13 +45,13 @@ export default function ProductDetails() {
             
         setComments(state => [...state, createComment])
     }
-
+    
     const deleteButtonClickHandler = async () => {
         const hasConfirmed = confirm(`Are you sure you want to delete ${product.title}`);
-
+        
         if(hasConfirmed){
             await productService.remove(productId);
-
+            
             navigate('/shopList')
         }
     }
